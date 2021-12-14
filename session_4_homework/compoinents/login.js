@@ -54,6 +54,11 @@ class Login{
         .catch((err)=>{
             console.log(err);
         })
+
+        this.$inputEmail.setError(null);
+        this.$inputPassword.setError(null);
+
+        
     }
 
     render(){

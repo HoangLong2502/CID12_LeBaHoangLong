@@ -1,0 +1,60 @@
+div{
+    border: 1px solid black;
+    margin: 5px;
+    font-size: 36px
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    border: none;
+}
+
+.SideBar{
+    width: 30%;
+}
+
+.Box{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+}
+
+.title button{
+    background-color: chocolate;
+    color: white;
+    height: 60%;
+    width: 20%;
+    border-radius: 5px;
+    border: none;
+}
+
+.box_chat{
+    display: flex;
+    height: 100vh;
+    width: 98%;
+}
+
+.chat{
+    width: 60%;
+}
+
+.inforPanel{
+    width: 36%;
+}
+
+.message_list{
+    height: 90%;
+}
+
+.composer{
+    height: 8%;
+}
