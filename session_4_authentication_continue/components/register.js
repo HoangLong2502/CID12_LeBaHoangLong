@@ -1,4 +1,6 @@
+import { setScreen } from "../app.js";
 import { InputGroup } from "./input_group.js";
+import { Login } from "./login.js";
 
 class Register{
     $container;
@@ -13,6 +15,7 @@ class Register{
 
     $feedbackMessage;
     $btnSubmit;
+    $linkToLogin;
 
     constructor(){
         this.$container = document.createElement('div');
@@ -35,6 +38,16 @@ class Register{
         this.$btnSubmit.classList.add('btnSubmit')
         this.$btnSubmit.type = 'submit';
         this.$btnSubmit.innerHTML = 'Register';
+
+        this.$linkToLogin = document.createElement('div');
+        this.$linkToLogin.classList.add('btn-link');
+        this.$linkToLogin.innerHTML("< Back to log in");
+        this.$linkToLogin.addEventListener('click', this.moveToLogin);
+    }
+
+    moveToLogin = ()=>{
+        const login = new Login();
+        setScreen(login);
     }
 
     handlesubmit = (evt)=>{
@@ -88,6 +101,7 @@ class Register{
         this.$container.appendChild(this.$text)
         this.$container.appendChild(this.$feedbackMessage);
         this.$container.appendChild(this.$formRegister);
+        this.$container.appendChild(this.$linkToLogin)
         return this.$container;
 
     }

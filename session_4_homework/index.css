@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+html,body{
+    font-family: 'Roboto';
+    margin: 0;
+    background-image: url(./png/login_background.jpg);
+    background-position-x: center;
+    background-position-y: -200px;
+    background-size: 100%;
+}
+
+.container{
+    width: 40%;
+    height: 100vh;
+    margin-left: 200px;
+    padding: 50px 100px;
+    background: rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    backdrop-filter: blur(20px);
+    color: #f1f1f1;
+}
+
+.title{
+    font-size: 54px;
+    font-weight: lighter;
+    margin: 200px 0 50px 0;
+}
+
+.label{
+    color: #f1f1f1;
+    font-size: medium;
+    font-weight: lighter;
+}
+
+input {
+    margin: 20px 0;
+    width: 70%;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid #f1f1f1;
+    background: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: lighter;
+    color: #f1f1f1;
+    
+}
+
+input:hover{
+    background-color: #d599655d;
+}
+
+.btnLogin{
+    margin: 50px 0;
+    width: 70%;
+    height: 75px;
+    background-color: #795E4D;
+    border: none;
+    color: #f1f1f1;
+    font-size: 24px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.btnSignup{
+    width: 70%;
+    height: 75px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 3px solid #795E4D;
+    color: #f1f1f1;
+    font-size: 24px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.btnSubmit {
+    margin: 50px 0;
+    width: 70%;
+    height: 75px;
+    background-color: #795E4D;
+    border: none;
+    color: #f1f1f1;
+    font-size: 24px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.error-msg{
+    color: #da4a40;
+    font-size: 18px;
+    font-weight: normal;
+}

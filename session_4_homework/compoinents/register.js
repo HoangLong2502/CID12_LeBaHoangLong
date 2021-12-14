@@ -1,4 +1,7 @@
-import { InputGroup } from "./input_group.js";
+import { setScreen } from "../app.js";
+import { Login } from"./login.js";
+import { InputGroup } from"./input_group.js";
+
 
 class Register{
     $container;
@@ -13,14 +16,14 @@ class Register{
 
     $feedbackMessage;
     $btnSubmit;
+    $btnLogin;
 
     constructor(){
         this.$container = document.createElement('div');
-        this.$container.classList.add('center');
+        this.$container.classList.add('container');
         this.$title = document.createElement('h1');
-        this.$title.innerHTML = 'Welcome to the Moon';
-        this.$text = document.createElement('p');
-        this.$text.innerHTML = 'Sign up to become a member of the moon'
+        this.$title.classList.add('title');
+        this.$title.innerHTML = 'Sign up to become a member of the moon';
 
         this.$formRegister = document.createElement('form');
         this.$formRegister.addEventListener('submit', this.handlesubmit);
@@ -35,6 +38,16 @@ class Register{
         this.$btnSubmit.classList.add('btnSubmit')
         this.$btnSubmit.type = 'submit';
         this.$btnSubmit.innerHTML = 'Register';
+
+        this.$btnLogin = document.createElement('button');
+        this.$btnLogin.classList.add('btnSignup');
+        this.$btnLogin.innerHTML = "Back to Login";
+        this.$btnLogin.addEventListener('click', this.moveToLogin);
+    }
+
+    moveToLogin = ()=>{
+        const login = new Login();
+        setScreen(login);
     }
 
     handlesubmit = (evt)=>{
@@ -85,9 +98,9 @@ class Register{
         this.$formRegister.appendChild(this.$btnSubmit);
 
         this.$container.appendChild(this.$title);
-        this.$container.appendChild(this.$text)
         this.$container.appendChild(this.$feedbackMessage);
         this.$container.appendChild(this.$formRegister);
+        this.$container.appendChild(this.$btnLogin)
         return this.$container;
 
     }
